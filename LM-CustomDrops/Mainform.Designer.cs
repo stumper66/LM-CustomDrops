@@ -110,6 +110,10 @@ namespace LM_CustomDrops
             this.SFD = new System.Windows.Forms.SaveFileDialog();
             this.cmenu2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtGroupId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEnchantments = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMobOrGroup)).BeginInit();
@@ -153,33 +157,33 @@ namespace LM_CustomDrops
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -204,7 +208,7 @@ namespace LM_CustomDrops
             this.cboMobOrGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboMobOrGroup.FormattingEnabled = true;
             this.cboMobOrGroup.Location = new System.Drawing.Point(9, 48);
-            this.cboMobOrGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboMobOrGroup.Margin = new System.Windows.Forms.Padding(2);
             this.cboMobOrGroup.Name = "cboMobOrGroup";
             this.cboMobOrGroup.Size = new System.Drawing.Size(174, 21);
             this.cboMobOrGroup.TabIndex = 2;
@@ -212,7 +216,7 @@ namespace LM_CustomDrops
             // btnAddNew
             // 
             this.btnAddNew.Location = new System.Drawing.Point(186, 48);
-            this.btnAddNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddNew.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(56, 20);
             this.btnAddNew.TabIndex = 3;
@@ -389,7 +393,7 @@ namespace LM_CustomDrops
             this.equippedDataGridViewCheckBoxColumn});
             this.dgvItem.DataSource = this.dvMain;
             this.dgvItem.Location = new System.Drawing.Point(163, 154);
-            this.dgvItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvItem.Margin = new System.Windows.Forms.Padding(2);
             this.dgvItem.Name = "dgvItem";
             this.dgvItem.RowHeadersVisible = false;
             this.dgvItem.RowHeadersWidth = 51;
@@ -545,7 +549,7 @@ namespace LM_CustomDrops
             this.lstMobOrGroup.ContextMenuStrip = this.cmenu1;
             this.lstMobOrGroup.FormattingEnabled = true;
             this.lstMobOrGroup.Location = new System.Drawing.Point(9, 154);
-            this.lstMobOrGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstMobOrGroup.Margin = new System.Windows.Forms.Padding(2);
             this.lstMobOrGroup.Name = "lstMobOrGroup";
             this.lstMobOrGroup.Size = new System.Drawing.Size(150, 277);
             this.lstMobOrGroup.TabIndex = 6;
@@ -608,7 +612,7 @@ namespace LM_CustomDrops
             // 
             this.btnAddMaterial.Enabled = false;
             this.btnAddMaterial.Location = new System.Drawing.Point(186, 89);
-            this.btnAddMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddMaterial.Name = "btnAddMaterial";
             this.btnAddMaterial.Size = new System.Drawing.Size(80, 20);
             this.btnAddMaterial.TabIndex = 8;
@@ -622,13 +626,17 @@ namespace LM_CustomDrops
             this.cboMaterials.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboMaterials.FormattingEnabled = true;
             this.cboMaterials.Location = new System.Drawing.Point(9, 89);
-            this.cboMaterials.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboMaterials.Margin = new System.Windows.Forms.Padding(2);
             this.cboMaterials.Name = "cboMaterials";
             this.cboMaterials.Size = new System.Drawing.Size(174, 21);
             this.cboMaterials.TabIndex = 7;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtEnchantments);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtGroupId);
             this.groupBox1.Controls.Add(this.chkEquipped);
             this.groupBox1.Controls.Add(this.chkNoSpawner);
             this.groupBox1.Controls.Add(this.chkNoMultiplier);
@@ -641,10 +649,10 @@ namespace LM_CustomDrops
             this.groupBox1.Controls.Add(this.numMinValue);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(301, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(586, 81);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(586, 113);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Defaults For New Items";
@@ -653,7 +661,7 @@ namespace LM_CustomDrops
             // 
             this.chkEquipped.AutoSize = true;
             this.chkEquipped.Location = new System.Drawing.Point(392, 25);
-            this.chkEquipped.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEquipped.Margin = new System.Windows.Forms.Padding(2);
             this.chkEquipped.Name = "chkEquipped";
             this.chkEquipped.Size = new System.Drawing.Size(65, 17);
             this.chkEquipped.TabIndex = 10;
@@ -664,7 +672,7 @@ namespace LM_CustomDrops
             // 
             this.chkNoSpawner.AutoSize = true;
             this.chkNoSpawner.Location = new System.Drawing.Point(297, 45);
-            this.chkNoSpawner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkNoSpawner.Margin = new System.Windows.Forms.Padding(2);
             this.chkNoSpawner.Name = "chkNoSpawner";
             this.chkNoSpawner.Size = new System.Drawing.Size(85, 17);
             this.chkNoSpawner.TabIndex = 9;
@@ -675,7 +683,7 @@ namespace LM_CustomDrops
             // 
             this.chkNoMultiplier.AutoSize = true;
             this.chkNoMultiplier.Location = new System.Drawing.Point(297, 23);
-            this.chkNoMultiplier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkNoMultiplier.Margin = new System.Windows.Forms.Padding(2);
             this.chkNoMultiplier.Name = "chkNoMultiplier";
             this.chkNoMultiplier.Size = new System.Drawing.Size(84, 17);
             this.chkNoMultiplier.TabIndex = 8;
@@ -691,7 +699,7 @@ namespace LM_CustomDrops
             0,
             65536});
             this.numChance.Location = new System.Drawing.Point(210, 44);
-            this.numChance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numChance.Margin = new System.Windows.Forms.Padding(2);
             this.numChance.Maximum = new decimal(new int[] {
             1,
             0,
@@ -719,7 +727,7 @@ namespace LM_CustomDrops
             // numAmount
             // 
             this.numAmount.Location = new System.Drawing.Point(210, 21);
-            this.numAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numAmount.Margin = new System.Windows.Forms.Padding(2);
             this.numAmount.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -752,7 +760,7 @@ namespace LM_CustomDrops
             // numMaxValue
             // 
             this.numMaxValue.Location = new System.Drawing.Point(74, 44);
-            this.numMaxValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numMaxValue.Margin = new System.Windows.Forms.Padding(2);
             this.numMaxValue.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -785,7 +793,7 @@ namespace LM_CustomDrops
             // numMinValue
             // 
             this.numMinValue.Location = new System.Drawing.Point(74, 21);
-            this.numMinValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numMinValue.Margin = new System.Windows.Forms.Padding(2);
             this.numMinValue.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -819,7 +827,7 @@ namespace LM_CustomDrops
             // 
             this.chkOverride.AutoSize = true;
             this.chkOverride.Location = new System.Drawing.Point(186, 28);
-            this.chkOverride.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkOverride.Margin = new System.Windows.Forms.Padding(2);
             this.chkOverride.Name = "chkOverride";
             this.chkOverride.Size = new System.Drawing.Size(66, 17);
             this.chkOverride.TabIndex = 11;
@@ -830,7 +838,7 @@ namespace LM_CustomDrops
             // 
             this.btnShowAllItems.Enabled = false;
             this.btnShowAllItems.Location = new System.Drawing.Point(163, 131);
-            this.btnShowAllItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowAllItems.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowAllItems.Name = "btnShowAllItems";
             this.btnShowAllItems.Size = new System.Drawing.Size(94, 19);
             this.btnShowAllItems.TabIndex = 12;
@@ -860,6 +868,38 @@ namespace LM_CustomDrops
             this.removeItemsToolStripMenuItem.Text = "Remove item(s)";
             this.removeItemsToolStripMenuItem.Click += new System.EventHandler(this.removeItemsToolStripMenuItem_Click);
             // 
+            // txtGroupId
+            // 
+            this.txtGroupId.Location = new System.Drawing.Point(443, 45);
+            this.txtGroupId.Name = "txtGroupId";
+            this.txtGroupId.Size = new System.Drawing.Size(46, 20);
+            this.txtGroupId.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(389, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "GroupId:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(20, 72);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Enchantments:";
+            // 
+            // txtEnchantments
+            // 
+            this.txtEnchantments.Location = new System.Drawing.Point(104, 69);
+            this.txtEnchantments.Name = "txtEnchantments";
+            this.txtEnchantments.Size = new System.Drawing.Size(385, 20);
+            this.txtEnchantments.TabIndex = 13;
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -879,7 +919,7 @@ namespace LM_CustomDrops
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LM - Custom Drops Formatter";
@@ -984,6 +1024,10 @@ namespace LM_CustomDrops
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip cmenu2;
         private System.Windows.Forms.ToolStripMenuItem removeItemsToolStripMenuItem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtGroupId;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEnchantments;
     }
 }
 

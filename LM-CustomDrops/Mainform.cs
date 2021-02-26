@@ -150,6 +150,8 @@ namespace LM_CustomDrops
             row["NoMultiplier"] = chkNoMultiplier.Checked;
             row["NoSpawner"] = chkNoSpawner.Checked;
             row["Equipped"] = chkEquipped.Checked;
+            if (!string.IsNullOrEmpty(txtGroupId.Text)) row["GroupId"] = txtGroupId.Text;
+            if (!string.IsNullOrEmpty(txtEnchantments.Text)) row["Enchantments"] = txtEnchantments.Text;
         }
 
         private DataRow AddNewMaterial(int NameId, string MobOrGroupName, string MaterialName)
